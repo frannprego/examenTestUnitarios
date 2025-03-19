@@ -15,3 +15,28 @@ Entrega tu repositorio con el código y los test. Además un `Readme` explicando
 Formato del `Readme` *1 punto*
 
 ---
+
+
+
+
+# Examen de Test Unitarios
+
+## Justificación de los apartados
+
+### 1. Tests Unitarios
+He utilizado dos tests unitarios usando `@ParameterizedTest` y `@CsvSource` para testear los métodos `comprobarDNI` y `calcularLetraDNI`.
+
+### 2. Error en el Código
+**Error detectado:** EL error se encuentra en el metodo `comprobarDNI` y `calcularLetraDNI` ya que si el DNI ingresado no es numérico, el método  lanzará una excepción.
+
+**Solución:**Una solución podría ser: Antes de hacer la conversión, se debe verificar que la cadena contenga solo números.
+
+### 3. Comprobacion previa de la Longitud del DNI
+
+Si no existiese una comprobación previa de la longitud del DNI, en los tests se deberían incluir casos con DNI de longitudes incorrectas, como por ejemplo :
+
+```java
+@CsvSource({
+    "123456789, F, false"   // Más de 8 caracteres
+    "1234567, F, false",   // Menos de 8 caracteres
+})
