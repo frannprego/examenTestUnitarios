@@ -29,7 +29,7 @@ He utilizado dos tests unitarios usando `@ParameterizedTest` y `@CsvSource` para
 ### 2. Error en el Código
 **Error detectado:** EL error se encuentra en el metodo `comprobarDNI` y `calcularLetraDNI` ya que si el DNI ingresado no es numérico, el método  lanzará una excepción.
 
-**Solución:**Una solución podría ser: Antes de hacer la conversión, se debe verificar que la cadena contenga solo números.
+**Solución:** Una solución podría ser: Antes de hacer la conversión, se debe verificar que la cadena contenga solo números.
 
 ### 3. Comprobacion previa de la Longitud del DNI
 
